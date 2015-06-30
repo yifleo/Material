@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:elevation="8dp"
+    android:background="@color/toolbarColor">
+
+    <TextView
+        android:id="@+id/tv_index_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/white"
+        android:text="Material"
+        android:textSize="20sp" />
+
+
+</android.support.v7.widget.Toolbar>

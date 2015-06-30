@@ -1,0 +1,18 @@
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.0.0'
+    defaultConfig {
+        minSdkVersion 13
+        targetSdkVersion 21
+    }
+    lintOptions {
+        abortOnError false
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+}
