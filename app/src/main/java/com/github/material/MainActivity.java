@@ -70,7 +70,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         mDrawerLayout.setDrawerListener(drawerToggle);
         DrawerLayout.LayoutParams params = (android.support.v4.widget.DrawerLayout.LayoutParams) linLay_slide_left
                 .getLayoutParams();
-        params.width = (int) (DisplayUtils.getScreenWidth(context) * 0.7);
+        // http://www.google.com/design/spec/layout/structure.html#structure-side-nav
+        params.width = Math.max(DisplayUtils.getScreenWidth(context) - DisplayUtils.dp2px(context, 56), DisplayUtils.dp2px(context, 320));
         linLay_slide_left.setLayoutParams(params);
 
     }
