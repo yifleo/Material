@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/assets" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/custume/custumeview/CanaroTextView.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/material/MainActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/slide/adapter/SlideAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/slide/adapter/StaggeredGridAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/slide/fragment/MainFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/guillotine/animation/GuillotineAnimation.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/guillotine/interfaces/GuillotineListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/guillotine/util/ActionBarInterpolator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/guillotine/util/GuillotineInterpolator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/content_1.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/content_2.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_activity.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_activity_active.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_feed.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_menu.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_menu_90.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_profile.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_settings.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/guillotine.xml" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

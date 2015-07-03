@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.github.base.BaseFragment;
 import com.github.material.R;
@@ -16,7 +17,7 @@ import com.github.slide.adapter.MainFragmentAdapter;
 /**
  *
  */
-public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
+public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, AdapterView.OnItemClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -90,7 +91,12 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
             public void run() {
                 swipe_refresh_main_fragment.setRefreshing(false);
             }
-        },2000);
+        }, 2000);
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
     }
 }
