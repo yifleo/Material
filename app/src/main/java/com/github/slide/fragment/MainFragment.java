@@ -1,5 +1,6 @@
 package com.github.slide.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -8,16 +9,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import com.github.base.BaseFragment;
+import com.github.material.GuillotineMenuActivity;
 import com.github.material.R;
 import com.github.slide.adapter.MainFragmentAdapter;
 
 /**
  *
  */
-public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, AdapterView.OnItemClickListener {
+public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, MainFragmentAdapter.OnItemClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -63,6 +64,7 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 
     private void initListener() {
         swipe_refresh_main_fragment.setOnRefreshListener(this);
+
     }
 
     private void initView() {
@@ -79,6 +81,7 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         // specify an adapter (see also next example)
         mAdapter = new MainFragmentAdapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
+        mAdapter.setOnItemClickListener(this);
 
 
     }
@@ -95,8 +98,10 @@ public class MainFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(getActivity(), GuillotineMenuActivity.class);
+        startActivity(intent);
     }
 }

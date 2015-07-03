@@ -35,27 +35,48 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     //-----------------------------------------other------------------------------------------//
     private Context context;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
-        initListener();
-        initSlide();
+    public int getLayoutResId() {
+        return R.layout.activity_main;
     }
 
-    private void initListener() {
-        lv_slide.setOnItemClickListener(this);
-    }
-
-    private void initView() {
+    @Override
+    public void initView() {
         context = this;
         lv_slide = (ListView) findViewById(R.id.lv_slide);
         linLay_slide_left = (LinearLayout) findViewById(R.id.linLay_slide_left);
         slideAdapter = new SlideAdapter(context);
         lv_slide.setAdapter(slideAdapter);
         FragmentUtils.addFragment(getSupportFragmentManager(), new MainFragment(), R.id.fraLay_main);
+        initSlide();
     }
+
+    @Override
+    public void initListener() {
+        lv_slide.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void initData(Context mContext) {
+
+    }
+
+    @Override
+    public void resume() {
+
+    }
+
+    @Override
+    public void destroy() {
+
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
 
     private void initSlide() {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -63,8 +84,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //   getSupportActionBar().setDisplayShowTitleEnabled(false);
         drawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,
                 R.string.app_name, R.string.app_name);
         mDrawerLayout.setDrawerListener(drawerToggle);

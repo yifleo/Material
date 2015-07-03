@@ -18,21 +18,10 @@ import com.github.utils.ImageUtils;
 public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapter.ViewHolder> {
     private Context context;
     private String[] imageUrl = Constants.IMAGES;
+    private OnItemClickListener onItemClickListener;
 
     public MainFragmentAdapter(Context context) {
         this.context = context;
-    }
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        protected  TextView mTextView;
-        protected  ImageView mImageView;
-
-        public ViewHolder(View v) {
-            super(v);
-            this.mTextView = (TextView) v.findViewById(R.id.tv_main_content);
-            this.mImageView = (ImageView) v.findViewById(R.id.iv_main_card);
-        }
     }
 
     @Override
@@ -44,14 +33,45 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
 
         ImageUtils.displayImage(Constants.IMAGES[position], holder.mImageView, context);
-
+        holder.v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return imageUrl.length;
     }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public static interface OnItemClickListener {
+        public void onItemClick(int position);
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        protected TextView mTextView;
+        protected ImageView mImageView;
+        protected View v;
+
+        public ViewHolder(View v) {
+            super(v);
+            this.v = v;
+            this.mTextView = (TextView) v.findViewById(R.id.tv_main_content);
+            this.mImageView = (ImageView) v.findViewById(R.id.iv_main_card);
+        }
+    }
+
+    ;
 }

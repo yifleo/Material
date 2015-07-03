@@ -28,17 +28,18 @@ public class StaggeredGridFragment extends BaseFragment implements SwipeRefreshL
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    // The URL to +1.  Must be a valid URL.
+    private final String PLUS_ONE_URL = "http://developer.android.com";
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    // The URL to +1.  Must be a valid URL.
-    private final String PLUS_ONE_URL = "http://developer.android.com";
-
     private RecyclerView recycler_staggered_view;
     private SwipeRefreshLayout swipe_refresh_staggered_fragment;
     private OnFragmentInteractionListener mListener;
+
+    public StaggeredGridFragment() {
+        // Required empty public constructor
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -56,10 +57,6 @@ public class StaggeredGridFragment extends BaseFragment implements SwipeRefreshL
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public StaggeredGridFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -96,7 +93,7 @@ public class StaggeredGridFragment extends BaseFragment implements SwipeRefreshL
         swipe_refresh_staggered_fragment.post(new Runnable() {
             @Override
             public void run() {
-                swipe_refresh_staggered_fragment.setRefreshing(true);
+                swipe_refresh_staggered_fragment.setRefreshing(false);
             }
         });
     }

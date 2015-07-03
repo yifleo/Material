@@ -25,7 +25,7 @@
             style="@style/ImageView.GuillotineItem"
             android:src="@drawable/ic_profile" />
 
-        <com.yalantis.guillotine.sample.widget.CanaroTextView
+        <com.github.custume.custumeview.CanaroTextView
             style="@style/TextView.GuillotineItem"
             android:text="@string/profile" />
     </LinearLayout>
@@ -38,7 +38,7 @@
             style="@style/ImageView.GuillotineItem"
             android:src="@drawable/ic_feed" />
 
-        <com.yalantis.guillotine.sample.widget.CanaroTextView
+        <com.github.custume.custumeview.CanaroTextView
             style="@style/TextView.GuillotineItem"
             android:text="@string/feed" />
     </LinearLayout>
@@ -51,7 +51,7 @@
             style="@style/ImageView.GuillotineItem"
             android:src="@drawable/ic_activity_active" />
 
-        <com.yalantis.guillotine.sample.widget.CanaroTextView
+        <com.github.custume.custumeview.CanaroTextView
             style="@style/TextView.GuillotineItem.Selected"
             android:text="@string/activity" />
     </LinearLayout>
@@ -68,7 +68,7 @@
             style="@style/ImageView.GuillotineItem"
             android:src="@drawable/ic_settings" />
 
-        <com.yalantis.guillotine.sample.widget.CanaroTextView
+        <com.github.custume.custumeview.CanaroTextView
             style="@style/TextView.GuillotineItem"
             android:text="@string/settings" />
     </LinearLayout>
