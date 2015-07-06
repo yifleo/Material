@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.github.custume.custumeview;
+package com.github.customview;
 
 import android.content.res.ColorStateList;
 import android.content.res.Resources;

@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.github.custume.custumeview;
+package com.github.customview;
 
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
@@ -382,15 +382,15 @@ public class RoundedDrawable extends Drawable {
 		return setBorderColor(ColorStateList.valueOf(color));
 	}
 
-	public ColorStateList getBorderColors() {
-		return mBorderColor;
-	}
-
 	public RoundedDrawable setBorderColor(ColorStateList colors) {
 		mBorderColor = colors != null ? colors : ColorStateList.valueOf(0);
 		mBorderPaint.setColor(mBorderColor.getColorForState(getState(),
 				DEFAULT_BORDER_COLOR));
 		return this;
+	}
+
+	public ColorStateList getBorderColors() {
+		return mBorderColor;
 	}
 
 	public boolean isOval() {

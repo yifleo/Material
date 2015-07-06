@@ -2,7 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/assets" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/custume/custumeview/CanaroTextView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/custume/custom/CanaroTextView.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/material/MainActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/slide/adapter/SlideAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/github/slide/adapter/StaggeredGridAdapter.java" charset="UTF-8" />

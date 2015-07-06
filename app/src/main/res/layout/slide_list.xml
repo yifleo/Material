@@ -20,7 +20,7 @@
             android:scaleType="fitXY"
             android:src="@drawable/theme_8mm_1x" />
 
-        <com.github.custume.custumeview.RoundedImageView
+        <com.github.custume.custom.RoundedImageView
             android:id="@+id/civ_avatar"
             android:layout_width="64dp"
             android:layout_height="64dp"

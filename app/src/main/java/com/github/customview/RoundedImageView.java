@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.github.custume.custumeview;
+package com.github.customview;
 
 
 import android.annotation.SuppressLint;
@@ -37,16 +37,15 @@ import com.github.material.R;
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedImageView extends ImageView {
 
+	public static final String TAG = "RoundedImageView";
+	public static final float DEFAULT_RADIUS = 0f;
+	public static final float DEFAULT_BORDER_WIDTH = 0f;
+	public static final Shader.TileMode DEFAULT_TILE_MODE = Shader.TileMode.CLAMP;
 	// Constants for tile mode attributes
 	private static final int TILE_MODE_UNDEFINED = -2;
 	private static final int TILE_MODE_CLAMP = 0;
 	private static final int TILE_MODE_REPEAT = 1;
 	private static final int TILE_MODE_MIRROR = 2;
-
-	public static final String TAG = "RoundedImageView";
-	public static final float DEFAULT_RADIUS = 0f;
-	public static final float DEFAULT_BORDER_WIDTH = 0f;
-	public static final Shader.TileMode DEFAULT_TILE_MODE = Shader.TileMode.CLAMP;
 	private static final ScaleType[] SCALE_TYPES = { ScaleType.MATRIX,
 			ScaleType.FIT_XY, ScaleType.FIT_START, ScaleType.FIT_CENTER,
 			ScaleType.FIT_END, ScaleType.CENTER, ScaleType.CENTER_CROP,
@@ -341,10 +340,6 @@ public class RoundedImageView extends ImageView {
 		return cornerRadius;
 	}
 
-	public void setCornerRadiusDimen(int resId) {
-		setCornerRadius(getResources().getDimension(resId));
-	}
-
 	public void setCornerRadius(float radius) {
 		if (cornerRadius == radius) {
 			return;
@@ -354,6 +349,10 @@ public class RoundedImageView extends ImageView {
 		updateDrawableAttrs();
 		updateBackgroundDrawableAttrs(false);
 		invalidate();
+	}
+
+	public void setCornerRadiusDimen(int resId) {
+		setCornerRadius(getResources().getDimension(resId));
 	}
 
 	public float getBorderWidth() {
@@ -383,10 +382,6 @@ public class RoundedImageView extends ImageView {
 		setBorderColor(ColorStateList.valueOf(color));
 	}
 
-	public ColorStateList getBorderColors() {
-		return borderColor;
-	}
-
 	public void setBorderColor(ColorStateList colors) {
 		if (borderColor.equals(colors)) {
 			return;
@@ -399,6 +394,10 @@ public class RoundedImageView extends ImageView {
 		if (borderWidth > 0) {
 			invalidate();
 		}
+	}
+
+	public ColorStateList getBorderColors() {
+		return borderColor;
 	}
 
 	public boolean isOval() {
